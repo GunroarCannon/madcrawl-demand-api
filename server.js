@@ -46,6 +46,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get("/health", (req, res) =>{
+    res.send("Server is doing pretty okay if you ask me.");
+    
+})
 app.post("/demand", async (req, res) => {
     try {
 
