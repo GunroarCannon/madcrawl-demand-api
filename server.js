@@ -1,4 +1,4 @@
-import express from "express";
+Fimport express from "express";
 import nodemailer from "nodemailer";
 import "dotenv/config";
 
@@ -65,7 +65,7 @@ app.post("/demand", async (req, res) => {
         await transporter.sendMail({
             from: `"Contact Form" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER, 
-            subject: "Madcrawl New Demand",
+            subject:`Madcrawl:${demandText}`,
             text: `\n\nMessage:\n${demandText}`,
         });
  
